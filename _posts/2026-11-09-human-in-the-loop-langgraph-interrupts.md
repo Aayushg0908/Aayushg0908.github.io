@@ -2,7 +2,7 @@
 layout: "post"
 title: "Human‑in‑the‑Loop with LangGraph: Using Interrupts to Build Controllable AI Agent Workflows"
 date: "2026-11-09"
-description: "Learn how LangGraph's interrupt, resume, and rewind primitives let you add controllable human‑in‑the‑loop checkpoints to AI agent workflows, improving safety an"
+description: "Learn how LangGraph interrupts let you add controllable human-in-the-loop checkpoints to AI agent workflows, improving safety and control."
 tags: ["langgraph", "hitl", "ai-agents", "workflow"]
 permalink: "/posts/human-in-the-loop-langgraph-interrupts/"
 ---
@@ -186,7 +186,7 @@ flowchart LR
     E --&gt; F[finalize]
     F --&gt; Z[End]
     subgraph Batch Review
-        E --&gt; G[interrupt (collect)]
+        E --&gt; G["interrupt (collect)"]
         G --&gt; H[human batch decision]
         H --&gt; E
     end
